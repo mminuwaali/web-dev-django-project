@@ -27,7 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['web-dev-django-project-production.up.railway.app', '*']
 
-CSRF_TRUSTED_ORIGINS = ['https://web-dev-django-project-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-dev-django-project-production.up.railway.app',
+    'https://mminuwaali-vigilant-space-spork-gpvqpq7w46394p7-8000.preview.app.github.dev'
+]
 
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'acct.apps.AcctConfig',
     'main.apps.MainConfig',
 ]
 
@@ -59,7 +63,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/ 'templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,12 +90,12 @@ DATABASES = {
 }
 
 DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'railway',
-        'HOST':'containers-us-west-132.railway.app',
-        'USER':'postgres',
-        'PASSWORD':'vmeic0DyfxH26beqTFfT',
-        'PORT':'6094',
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'railway',
+    'HOST': 'containers-us-west-132.railway.app',
+    'USER': 'postgres',
+    'PASSWORD': 'vmeic0DyfxH26beqTFfT',
+    'PORT': '6094',
 }
 
 # Password validation
