@@ -1,0 +1,109 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+{% block main %}
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center"
+         style="background-image: url('assets/img/page-header.jpg')">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Register</h2>
+            <p>{% lorem 1 %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>Register</li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+  <!-- End Breadcrumbs -->
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="row gy-4 mt-4">
+        <div class="col-lg-8 mx-auto">
+          <form action="{% url 'register' %}" method="post" class="php-email-form">
+            {% csrf_token %}
+            {% if messages %}
+            {% for msg in messages %}
+            <i>{{msg}}</i>
+            {% endfor %}
+            {% endif %}
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text"
+                       name="first_name"
+                       class="mt-4 form-control"
+                       placeholder="Your First Name"
+                       required/>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="text"
+                       name="last_name"
+                       class="mt-4 form-control"
+                       placeholder="Your Last Name"
+                       required/>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="text"
+                       name="username"
+                       class="mt-4 form-control"
+                       placeholder="Your Username"
+                       required/>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email"
+                       name="email"
+                       class="mt-4 form-control"
+                       placeholder="Enter a valid email"
+                       required/>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="text"
+                       name="reg_num"
+                       class="mt-4 form-control"
+                       placeholder="Your registration number"
+                       required/>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="file"
+                       name="profile"
+                       class="mt-4 form-control"
+                       placeholder="Your Profile picture"
+                       />
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="password"
+                       name="password"
+                       class="mt-4 form-control"
+                       placeholder="Enter your password"
+                       required/>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="password"
+                       name="confirm_password"
+                       class="mt-4 form-control"
+                       placeholder="Repeat your password"
+                       required/>
+              </div>
+              <div class="text-center">
+                <button type="submit">Register</button>
+              </div>
+            </form>
+          </div>
+          <!-- End Contact Form -->
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+  {% endblock %}
+  {% block faq %}{% endblock %}

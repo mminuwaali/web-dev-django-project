@@ -61,6 +61,7 @@
           <li><a href="{% url 'pricing' %}" class="{% if name == 'pricing' %} active {% endif %}">Pricing</a></li>
           <li><a href="{% url 'member' %}" class="{% if name == 'member' %} active {% endif %}">Team</a></li>
           <li><a href="{% url 'contact' %}" class="{% if name == 'contact' %} active {% endif %}">Contact</a></li>
+          {% comment %} <li><a href="{% url 'register' %}" class="{% if name == 'contact' %} active {% endif %}">Register</a></li> {% endcomment %}
           <li><a class="get-a-quote" href="{% url 'quote' %}">Get a Quote</a></li>
         </ul>
       </nav><!-- .navbar -->
