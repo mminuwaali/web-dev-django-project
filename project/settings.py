@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['web-dev-django-project-production.up.railway.app', '*']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-dev-django-project-production.up.railway.app',
-    'https://mminuwaali-vigilant-space-spork-gpvqpq7w46394p7-8000.preview.app.github.dev'
+    'https://mminuwaali-congenial-space-disco-vr4xrrg5wj93pxv4-8080.preview.app.github.dev'
 ]
 
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

@@ -1,4 +1,5 @@
 from . import models
+from acct.models import Profile
 from .forms import ContactForm, QuoteForm
 from django.shortcuts import render, redirect
 from project.utils import query_all_db, filter_query_db
@@ -28,7 +29,7 @@ def pricing_view(request):
 def member_view(request):
     context = {
         'name':'member',
-        'team':filter_query_db(models.Team, member=True),
+        'team':filter_query_db(Profile, team_member=True),
     }
     return render(request, 'main/team.html', context)
 
