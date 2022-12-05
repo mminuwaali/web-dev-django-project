@@ -10,8 +10,9 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6 text-center">
           <h2>About</h2>
-          <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a
-            odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.
+          <p>
+            We are a transportation delivery company which provides shipping and logistics solutions to companies.
+             We ship products to people and deliver it to them at a cheeper rate, fast service, and the lowest price guarantee.
           </p>
         </div>
       </div>
@@ -39,30 +40,29 @@
       <div class="col-lg-6 content order-last  order-lg-first">
         <h3>About Us</h3>
         <p>
-          Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia
-          molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis
-          asperiores placeat.
+          We are a transportation delivery company which provides shipping and logistics solutions to companies.
+           We ship products to people and deliver it to them at a cheeper rate, fast service, and the lowest price guarantee.
         </p>
         <ul>
           <li data-aos="fade-up" data-aos-delay="100">
             <i class="bi bi-diagram-3"></i>
             <div>
-              <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-              <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+              <h5>The best of them all.</h5>
+              <p>We don't simply accept to be second to any, we are always second to none.</p>
             </div>
           </li>
           <li data-aos="fade-up" data-aos-delay="200">
             <i class="bi bi-fullscreen-exit"></i>
             <div>
-              <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-              <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+              <h5>We are everywhere and always available.</h5>
+              <p>we know that time is money, hence we strive to make you feel on time.</p>
             </div>
           </li>
           <li data-aos="fade-up" data-aos-delay="300">
             <i class="bi bi-broadcast"></i>
             <div>
-              <h5>Voluptatem et qui exercitationem</h5>
-              <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+              <h5>We don't simply do, we act.</h5>
+              <p>trust us in handling your products and we will never fail you.</p>
             </div>
           </li>
         </ul>
@@ -126,23 +126,17 @@
     </div>
 
     <div class="row" data-aos="fade-up" data-aos-delay="100">
-
       {% for item in team %}
       <div class="col-lg-4 col-md-6 d-flex">
         <div class="member">
-          <img src="{{ item.image.url }}" class="img-fluid" alt="">
+          <img src="{{ item.profile.url }}" class="img-fluid" alt="profile" />
           <div class="member-content">
             <h4>{{ item.user.first_name }} {{ item.user.last_name }}</h4>
-            <span>{{ item.position }}</span>
+            <span>{{ item.proffession }}</span>
+            <span>{{ item.reg_number }}</span>
             <p>
               {{ item.content }}
             </p>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
           </div>
         </div>
       </div><!-- End Team Member -->

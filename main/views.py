@@ -14,7 +14,7 @@ def home_view(request):
 def about_view(request):
     context = {
         'name':'about',
-        'team':filter_query_db(models.Team, member=True),
+        'team':filter_query_db(Profile, team_member=True),
     }
     return render(request, 'main/about.html', context)
 
